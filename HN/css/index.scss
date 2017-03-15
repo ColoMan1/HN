@@ -28,11 +28,11 @@ $fontcolor:#FFFFFF;
 }
 
 /*! nav  style*/
-.row{
-    div{
-        line-height: 90px;
-    }
-}
+//.row{
+//  div{
+//      line-height: 90px;
+//  }
+//}
 
 .img{
     height: 80px;
@@ -109,19 +109,40 @@ $fontcolor:#FFFFFF;
  * 
  * 
  * */
+@mixin transition1{
+    transition:all 1s linear;
+    -moz-transition:all 1s linear; /* Firefox 4 */
+    -webkit-transition:all 1s linear; /* Safari and Chrome */
+    -o-transition:all 1s linear;
+}
+@mixin transform1{
+    transform:rotateY(180deg);
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+    -moz-transform:rotateY(180deg); /* Firefox */
+}
+
+
 .three_wenzi{
     color: #078CEE;
 
     p{
         margin: 65px 0 60px;
-        @include font(20px,"microsoft Yahei");
-        font-size: 20px;
+        @include font(30px,"microsoft Yahei");
+        font-size: 30px;
     }
 }
 .three_box{
     width: 100%;
     height: $pingheight;
     background-color: #11162B;
+    img{
+        opacity: 1;
+        @include transition1;
+    }
+    img:hover{
+        @include transform1;
+        opacity: 0.2;
+    }
 }
 /*
  *
@@ -164,6 +185,10 @@ $fontcolor:#FFFFFF;
     img{
         height: 150px;
         margin-bottom: 90px;
+        @include transition1;
+    }
+    img:hover{
+        @include transform1;
     }
     .six_top{
         margin-top: 110px;
@@ -186,9 +211,9 @@ $fontcolor:#FFFFFF;
  * 
  * 
  * */
-.bottom_box{
+.navbar-default.navbar-fixed-bottom{
     background-color: #11162B;
-    height: 140px;
+    margin-top: 20px;
     .bottom_top{
         width: 515px;
         color: #F9F9F9;
@@ -211,6 +236,7 @@ $fontcolor:#FFFFFF;
     }
 }
 
+
 /*
  *
  * ------brand   style
@@ -219,7 +245,9 @@ $fontcolor:#FFFFFF;
  * */
 $marginleft:20px;
 
-
+.active_a{
+    background-color: #4B82EC;
+}
 .cantent_box{
     height: 518px;
     ul{
@@ -229,33 +257,49 @@ $marginleft:20px;
         margin-top: 140px;
         padding: 5px;
         li{
-            width: 100%;
+            width: 100%;        
             a{
                 margin: auto;
                 width: 80%;
                 border-radius: 5px 5px;
+                color: #000000;
+
             }
             a:hover{
-                color: #fff;
-                background: #CCCCCC;
+                background-color: #CCCCCC;
+            }
+            a:focus{
+                background-color: #4B82EC;
+            }
+            span{
+                border-bottom: 1px solid #CCCCCC;
+                width: 80%;
+                display: block;
+                margin: auto;
+                width: 103px;
             }
         }
     }
-    .brand_tupian_top{
-        img:nth-child(2){
-            margin-left: $marginleft;
-        }
-    }
-    .brand_tupian_buttom{
-        img:nth-child(2){
-            margin-left: $marginleft;
-        }
+
+}
+.content_tupian{
+    img{
+        height: 200px;
+        margin-top: 15px;
     }
 }
 
+/*
+ *
+ * ------register   style
+ * 
+ * 
+ * */
+.register_cantent_box{
+    height: 520px;
+    background-color: #FFFFFF;
 
-
-
+}
 
 
 
