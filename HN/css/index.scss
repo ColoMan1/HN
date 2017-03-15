@@ -41,16 +41,14 @@ $fontcolor:#FFFFFF;
 .nav_logo{
     padding: 5px 15px;
 }
-.nav_box{
-    height: 90px;
-}
+
 .collapse{
     .nav {
         li{
             width: 15%;
             a{
                 height: 90px;
-                line-height: 60px;
+                line-height: 90px;
                 color: $fontcolor;
                 span{
                     height: 60px;
@@ -69,26 +67,36 @@ $fontcolor:#FFFFFF;
     }
 }
 
-.nav_ul{
+#nav_ul{
     width: 63%;
+    a{
+        padding: 0;
+    }
 }
 .nav_top{
     background-color: #182141;
 }
 .top_right{
+    margin-top: 33px;
+    margin-right: 31px;
     img{
         height: 22px;
         width: 22px;
         background-color: #80BAF8;
+        float: left;
     }
     a{
-        color: $fontcolor;
         float: left;
-        height: 60px;
-        width: 70px;
-        display: block;
-        line-height: 85px;
     }
+    .nav_top_left{
+        float: right;
+
+    }
+    .nav_top_right{
+        float: right;
+        margin-right: 15px;
+    }
+
 }
 .navbar-fixed-top{
     border-width:0;
@@ -135,6 +143,7 @@ $fontcolor:#FFFFFF;
     width: 100%;
     height: $pingheight;
     background-color: #11162B;
+    padding-top: 75px;
     img{
         opacity: 1;
         @include transition1;
@@ -155,7 +164,7 @@ $fontcolor:#FFFFFF;
     width: 100%;
     height: $pingheight;
     img{
-        margin-top: 90px;
+        margin-top: 140px;
         margin-bottom: 80px;
     }
 }
@@ -213,7 +222,6 @@ $fontcolor:#FFFFFF;
  * */
 .navbar-default.navbar-fixed-bottom{
     background-color: #11162B;
-    margin-top: 20px;
     .bottom_top{
         width: 515px;
         color: #F9F9F9;
@@ -235,7 +243,9 @@ $fontcolor:#FFFFFF;
         margin-top: 20px;
     }
 }
-
+.bottom_box{ //首页页脚
+    @extend .navbar-default.navbar-fixed-bottom;
+}
 
 /*
  *
