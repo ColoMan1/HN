@@ -11,6 +11,7 @@
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/index.css" rel="stylesheet">
+    <link href="../font/iconfont.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,11 +29,10 @@
 ------导航
   	
 -->
-		<nav class="navbar navbar-default nav_top" role="navigation">
+		<nav class="navbar navbar-default navbar-fixed-top nav_top" role="navigation">
 				<div class="container nav_box">
 					<div class="navbar-header">
-			 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-			        <span class="sr-only">hzhn</span>
+			 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
@@ -42,8 +42,8 @@
 			      </a>  <!--这里的a标签是导航左边的logo-->
 			  	</div>
 			
-					<div class="collapse navbar-collapse container-fluid" id="bs-example-navbar-collapse-1">
-			      <ul class="nav navbar-nav nav_ul">
+					<div class="collapse navbar-collapse container-fluid" id="navbar-collapse">
+			      <ul class="nav navbar-nav" id="nav_ul">
 			 				<li class="col-md-2"><a href="index.html" class="text-center"><span>首页</span></a></li>
 			 				<li class="col-md-2"><a href="#"class="text-center"><span>服务品牌</span></a></li>
 							<li class="col-md-2"><a href="#"class="text-center"><span>新闻中心</span></a></li>
@@ -52,14 +52,18 @@
 							<li class="col-md-2"><a href="#"class="text-center"><span style="border-right: 1px solid #3C4257;">会员中心</span></a></li>
 			  		</ul>
 			  		<div class="top_right">
-				  				<a class="">
-					  				<img src="../images/top1.png" alt="" />
-					  				注册
-					  			</a>
-					  			<a class="">
-					  				<img src="../images/top1.png" alt="" />
-					  				注册
-					  			</a>
+				  		<div class="nav_top_left">
+				  			<a class="">
+				  				<img src="../images/top1.png" alt="Responsive image" class="img-responsive"/>
+				  				<span>注册</span>
+				  			</a>
+				  		</div>
+				  		<div class="nav_top_right">
+				  			<a class="">
+				  				<img src="../images/top1.png" alt="Responsive image" class="img-responsive"/>
+				  				<span>注册</span>
+				  			</a>
+				  		</div>
 			  		</div>
 			  	</div>
 			  	
@@ -77,13 +81,77 @@
 <div class="container register_cantent_box">
 	<div class="row">
 		<div class="col-xs-12">
-			<div class="col-xs-2 pull-left">欢迎注册</div>
-			<div class="col-xs-2 pull-right">
-				<p>已有账号,<span>立即登录</span></p>
+			<div class="col-xs-6 pull-left text-left">欢迎注册</div>
+			<div class="col-xs-6 pull-right text-right">
+				<p>已有账号,<a>立即登录</a></p>
 			</div>
 		</div>
-		<div class="col-xs-11" style="border-bottom: 2px solid #CCCCCC;"></div>
+			<div class="col-xs-11" style="border-bottom: 2px solid #CCCCCC;margin-left: 30px;"></div>
+
 	</div>
+	
+	
+	
+	
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<img src="../images/1_2.png" alt="Responsive image" class="col-md-3 col-sm-3 col-xs-3 img-responsive"/>
+			<img src="../images/2_1.png" alt="Responsive image" class="col-md-3 col-sm-3 col-xs-3 img-responsive"/>
+			<img src="../images/3_1.png" alt="Responsive image" class="col-md-3 col-sm-3 col-xs-3 img-responsive"/>
+			<img src="../images/4_1.png" alt="Responsive image" class="col-md-3 col-sm-3 col-xs-3 img-responsive"/>
+		</div>
+	</div>
+	
+	
+	<div class="row" style="margin-top: 50px;">
+		<div class="col-md-6 col-xs-6 col-sm-6 register_input_box">
+<!--1-->			
+			<div class="register_inpbox_1 col-sm-8 col-xs-8">
+				<div class="register_input_1">
+					<i class="iconfont">&#xe65c;</i>
+					<input type="text" placeholder="请输入登录邮箱"/>
+				</div>
+				<span>4</span>		
+			</div>
+<!--2-->
+			<div class="register_inpbox_2 col-sm-8 col-xs-8">
+				<div class="register_input_2">
+					<input type="text" placeholder="     请输入验证码"/>
+					<button type="submit">获取验证码</button>
+				</div>
+				<span>密码错误</span>
+			</div>			
+<!--3-->
+			<div class="register_inpbox_3 col-sm-8 col-xs-8">
+				<div class="register_input_3">
+					<i class="iconfont">&#xe6cb;</i>
+					<input type="text" placeholder="请输入6-12位登录密码"/>
+				</div>
+				<span></span>
+			</div>
+<!--4-->			
+			<div class="register_inpbox_4 col-sm-8 col-xs-8">
+				<div class="register_input_4">
+					<i class="iconfont">&#xe6cb;</i>
+					<input type="text" placeholder="密码确认(必填)"/>
+				</div>
+				<span>密码错误</span>
+			</div>	
+			
+			<div class="register_inpbox_5 col-sm-8 col-xs-8">
+				<input type="checkbox" /><span>我已阅读并接受</span><a href="#">《第三方只能商标标识防伪认证平台服务协议》</a>
+			</div>
+			
+			<button type="button" class="register_bottom_but col-sm-8 col-xs-8">下一步</button>
+			
+		</div>
+		<div class="col-md-6 col-xs-6 col-sm-6">
+			<img src="../images/zhuce.png" class="img-responsive"alt="Responsive image" />
+		</div>
+	</div>
+	
+	
+	
 </div>
 	<!--
   		
