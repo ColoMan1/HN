@@ -260,20 +260,15 @@ $marginleft:20px;
     background-color: #4B82EC;
 }
 .cantent_box{
-    height: 518px;
-    margin-top: 120px;
-    margin-bottom: 120px;
     ul{
         border: 1px solid #CCCCCC;
-        width: 150px;
         border-radius: 5px 5px;
-        margin-top: 140px;
+        margin-top: 10%;
         padding: 5px;
         li{
             width: 100%;        
             a{
                 margin: auto;
-                width: 80%;
                 border-radius: 5px 5px;
                 color: #000000;
 
@@ -289,7 +284,6 @@ $marginleft:20px;
                 width: 80%;
                 display: block;
                 margin: auto;
-                width: 103px;
             }
         }
     }
@@ -297,7 +291,7 @@ $marginleft:20px;
 }
 .content_tupian{
     img{
-        height: 200px;
+
         margin-top: 15px;
     }
 }
@@ -308,20 +302,36 @@ $marginleft:20px;
  * 
  * 
  * */
+
+ @mixin input{
+     border: 0;
+    outline:none;
+}
+@mixin border{
+    border-bottom: 1px solid #CCCCCC;
+}
+@media (min-width:768px) { 
+    .input_width{
+            width: 83%;
+    }
+}
+@mixin padding{
+    padding: 0;
+}
 .register_cantent_box{
     background-color: #FFFFFF;
-    margin-top: 120px;
     width: 66%;
     .row{
         margin: 3% auto;
     }
-    .col-xs-6.pull-left{
+    .register_hy{
         font-size: 23px;
         color: #CCCCCC;
+        @include padding;
     }
-    .col-xs-6.pull-right{
+    .register_dl{
+        @include padding;
         font-size: 16px;
-        padding-right: 40px;
         p{
             color: #CCCCCC;
         }
@@ -331,33 +341,40 @@ $marginleft:20px;
     }
     .col-md-10.col-md-offset-1{
         img{
-            padding: 0;
+            @include padding;
         }
     }
-    .register_input_1{
-        border-bottom: 1px solid #CCCCCC;
 
+    .register_input_1{
+        @include border;
         input{
-            border: 0;
-            outline:none;
+            @include input;
+            width: 84%;
         }
     }
     .register_input_2{
-        @extend .register_input_1;
-
+        @include border;
+        input{
+            @include input;
+        }
         button{
             background-color: #4B82EC;
             color: white;
-            height: 37px;
-            width: 105px;
+            float: right;
+            border: 0;
         }
-
     }
     .register_input_3{
-        @extend .register_input_1;
+        @include border;
+        input{
+            @include input;
+        }
     }
     .register_input_4{
-        @extend .register_input_1;
+        @include border;
+        input{
+            @include input;
+        }
     }
     .register_bottom_but{
         background-color: #4B82EC;

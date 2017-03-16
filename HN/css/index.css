@@ -69,27 +69,33 @@ a { cursor: pointer; }
 /*  ------brand   style   */
 .active_a { background-color: #4B82EC; }
 
-.cantent_box { height: 518px; margin-top: 120px; margin-bottom: 120px; }
-.cantent_box ul { border: 1px solid #CCCCCC; width: 150px; border-radius: 5px 5px; margin-top: 140px; padding: 5px; }
+.cantent_box ul { border: 1px solid #CCCCCC; border-radius: 5px 5px; margin-top: 10%; padding: 5px; }
 .cantent_box ul li { width: 100%; }
-.cantent_box ul li a { margin: auto; width: 80%; border-radius: 5px 5px; color: #000000; }
+.cantent_box ul li a { margin: auto; border-radius: 5px 5px; color: #000000; }
 .cantent_box ul li a:hover { background-color: #CCCCCC; }
 .cantent_box ul li a:focus { background-color: #4B82EC; }
-.cantent_box ul li span { border-bottom: 1px solid #CCCCCC; width: 80%; display: block; margin: auto; width: 103px; }
+.cantent_box ul li span { border-bottom: 1px solid #CCCCCC; width: 80%; display: block; margin: auto; }
 
-.content_tupian img { height: 200px; margin-top: 15px; }
+.content_tupian img { margin-top: 15px; }
 
 /*  ------register   style   */
-.register_cantent_box { background-color: #FFFFFF; margin-top: 120px; width: 66%; }
+@media (min-width: 768px) { .input_width { width: 83%; } }
+.register_cantent_box { background-color: #FFFFFF; width: 66%; }
 .register_cantent_box .row { margin: 3% auto; }
-.register_cantent_box .col-xs-6.pull-left { font-size: 23px; color: #CCCCCC; }
-.register_cantent_box .col-xs-6.pull-right { font-size: 16px; padding-right: 40px; }
-.register_cantent_box .col-xs-6.pull-right p { color: #CCCCCC; }
-.register_cantent_box .col-xs-6.pull-right a { color: red; }
+.register_cantent_box .register_hy { font-size: 23px; color: #CCCCCC; padding: 0; }
+.register_cantent_box .register_dl { padding: 0; font-size: 16px; }
+.register_cantent_box .register_dl p { color: #CCCCCC; }
+.register_cantent_box .register_dl a { color: red; }
 .register_cantent_box .col-md-10.col-md-offset-1 img { padding: 0; }
-.register_cantent_box .register_input_1, .register_cantent_box .register_input_2, .register_cantent_box .register_input_3, .register_cantent_box .register_input_4 { border-bottom: 1px solid #CCCCCC; }
-.register_cantent_box .register_input_1 input, .register_cantent_box .register_input_2 input, .register_cantent_box .register_input_3 input, .register_cantent_box .register_input_4 input { border: 0; outline: none; }
-.register_cantent_box .register_input_2 button { background-color: #4B82EC; color: white; height: 37px; width: 105px; }
+.register_cantent_box .register_input_1 { border-bottom: 1px solid #CCCCCC; }
+.register_cantent_box .register_input_1 input { border: 0; outline: none; width: 84%; }
+.register_cantent_box .register_input_2 { border-bottom: 1px solid #CCCCCC; }
+.register_cantent_box .register_input_2 input { border: 0; outline: none; }
+.register_cantent_box .register_input_2 button { background-color: #4B82EC; color: white; float: right; border: 0; }
+.register_cantent_box .register_input_3 { border-bottom: 1px solid #CCCCCC; }
+.register_cantent_box .register_input_3 input { border: 0; outline: none; }
+.register_cantent_box .register_input_4 { border-bottom: 1px solid #CCCCCC; }
+.register_cantent_box .register_input_4 input { border: 0; outline: none; }
 .register_cantent_box .register_bottom_but { background-color: #4B82EC; color: white; }
 .register_cantent_box .register_inpbox_5, .register_cantent_box .register_bottom_but { margin-top: 10px; }
 .register_cantent_box .register_inpbox_1, .register_cantent_box .register_inpbox_2, .register_cantent_box .register_inpbox_3, .register_cantent_box .register_inpbox_4 { height: 60px; }
