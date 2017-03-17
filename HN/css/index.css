@@ -7,26 +7,18 @@ a { cursor: pointer; }
 .nav-tabs { border-bottom: none; }
 
 /*! nav  style*/
-.img { height: 70px; width: 235px; }
-
-.nav_logo { padding: 11px 0px; }
-
-.collapse .nav li { width: 15%; }
+@media (max-width: 768px) { .navbar-header { height: 100px; } }
 .collapse .nav li a { height: 90px; line-height: 90px; color: #FFFFFF; }
-.collapse .nav li a span { height: 80px; width: 106px; display: block; }
-.collapse .nav li a span:hover { border-bottom: 4px solid #4B82EC; padding-bottom: 20px; }
 .collapse .nav li a:hover { color: #FFFFFF; }
 
-#nav_ul { width: 62%; }
 #nav_ul a { padding: 0; }
 
 .nav_top { background-color: #182141; }
+.nav_top .nav_box { margin-left: 9%; }
 
-.top_right { margin-top: 33px; margin-right: 31px; }
-.top_right img { height: 22px; width: 22px; background-color: #80BAF8; float: left; }
-.top_right a { float: left; }
-.top_right .nav_top_left { float: right; }
-.top_right .nav_top_right { margin-right: 15px; }
+.top_right { margin-top: 35px; }
+.top_right .nav_top_left { padding: 0; text-align: center; }
+.top_right .nav_top_right { padding: 0; text-align: center; }
 
 .navbar-fixed-top { border-width: 0; }
 
