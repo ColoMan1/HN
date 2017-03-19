@@ -1,3 +1,8 @@
+
+body,input,button{
+    font-family: "SimSun","SimHei","Microsoft YaHei","NSimSun","FangSong","KaiTi","FangSong";
+}
+
 a{
     cursor: pointer;
 }
@@ -33,7 +38,25 @@ $fontcolor:#FFFFFF;
         height: 100px;
     }
 }
-
+@media (min-width:992px) { 
+    .nav_top{
+        height: 90px;
+    }
+}
+@media (min-width:768px) and (max-width: 992px){ 
+    .navbar-header{
+        margin-top: 6%;
+    }
+    .nav_box .top_right{
+        margin-top: 65px;
+    }
+    .nav_li{
+        margin-right: 1px;
+    }
+    #navbar-collapse #nav_ul_span{
+        border-right: none;
+    }
+}
 .collapse{
     .nav {
         li{
@@ -50,14 +73,29 @@ $fontcolor:#FFFFFF;
 }
 
 #nav_ul{
+    padding-right: 0;
+    font-size: 18px;
     a{
         padding: 0;
+    }
+    li{
+        padding: 0;
+    }
+    span{
+        display: inline-block;
+        border-right: 1px solid white;
+        padding-right: 18px;
+        height: 50px;
+    }
+    .nav_ul_li{
+        height: 75px;
+        border-bottom: 2px solid 
     }
 }
 .nav_top{
     background-color: #182141;
     .nav_box{
-        margin-left: 9%;
+        margin-left: 7%;
     }
 }
 
@@ -84,7 +122,6 @@ $fontcolor:#FFFFFF;
  * */
 .video_style{
     padding: 0;
-    margin-top: 90px;
 }
 /*
  *
@@ -109,7 +146,7 @@ $fontcolor:#FFFFFF;
     color: #078CEE;
 
     p{
-        margin: 65px 0 60px;
+        margin: 0 0 60px;
         @include font(30px,"microsoft Yahei");
         font-size: 30px;
     }
@@ -118,7 +155,7 @@ $fontcolor:#FFFFFF;
     width: 100%;
     height: $pingheight;
     background-color: #11162B;
-    padding-top: 75px;
+    padding-top: 110px;
     img{
         opacity: 1;
         @include transition1;
@@ -139,7 +176,7 @@ $fontcolor:#FFFFFF;
     width: 100%;
     height: $pingheight;
     img{
-        margin-top: 140px;
+        margin-top: 100px;
         margin-bottom: 80px;
     }
 }
@@ -175,7 +212,7 @@ $fontcolor:#FFFFFF;
         @include transform1;
     }
     .six_top{
-        margin-top: 110px;
+        margin-top: 40px;
         line-height: 160px;
         span{
             color: #0185E3;
@@ -370,7 +407,6 @@ $marginleft:20px;
         }
         button{
             height: 47px;
-            width: 14%;
             margin-bottom: 50px;
             background-color: #4374D4;
             color: white;
