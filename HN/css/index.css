@@ -1,4 +1,4 @@
-body, input, button { font-family: "SimSun","SimHei","Microsoft YaHei","NSimSun","FangSong","KaiTi","FangSong"; }
+body, input, button { font-family: "Microsoft YaHei", "SimSun", "SimHei", "NSimSun", "FangSong", "KaiTi"; }
 
 a { cursor: pointer; }
 
@@ -9,27 +9,34 @@ a { cursor: pointer; }
 .nav-tabs { border-bottom: none; }
 
 /*! nav  style*/
-@media (max-width: 768px) { .navbar-header { height: 100px; } }
+@media (max-width: 768px) { .navbar-header { height: 100px; }
+  .navbar-fixed-bottom { position: none; } }
+@media (min-width: 768px) { .navbar-fixed { bottom: 0; margin-bottom: 0; border-width: 1px 0 0; position: fixed; right: 0; left: 0; z-index: 1030; } }
 @media (min-width: 992px) { .nav_top { height: 90px; } }
 @media (min-width: 768px) and (max-width: 992px) { .navbar-header { margin-top: 6%; }
   .nav_box .top_right { margin-top: 65px; }
   .nav_li { margin-right: 1px; }
-  #navbar-collapse #nav_ul_span { border-right: none; } }
+  .nav_sx1, .nav_sx2 { display: none; } }
 .collapse .nav li a { height: 90px; line-height: 90px; color: #FFFFFF; }
 .collapse .nav li a:hover { color: #FFFFFF; }
+.collapse .nav li a:focus { color: #4B82EC; }
 
 #nav_ul { padding-right: 0; font-size: 18px; }
-#nav_ul a { padding: 0; }
+#nav_ul a { padding: 0; padding-top: 20px; line-height: 52px; }
 #nav_ul li { padding: 0; }
-#nav_ul span { display: inline-block; border-right: 1px solid white; padding-right: 18px; height: 50px; }
-#nav_ul .nav_ul_li { height: 75px; border-bottom: 2px solid; }
+#nav_ul span:first-child { width: 72px; }
 
 .nav_top { background-color: #182141; }
-.nav_top .nav_box { margin-left: 7%; }
+
+.span_active { display: inline-block; height: 55px; border-bottom: 2px solid #4B82EC; }
 
 .top_right { margin-top: 35px; }
 .top_right .nav_top_left { padding: 0; text-align: center; }
 .top_right .nav_top_right { padding: 0; text-align: center; }
+
+.nav_sx2 { height: 55px; border-left: 2px solid #3E4458; float: left; margin-top: 20px; }
+
+.nav_sx1 { height: 55px; border-left: 2px solid #151B2F; float: left; margin-top: 20px; }
 
 .navbar-fixed-top { border-width: 0; }
 
@@ -72,6 +79,7 @@ a { cursor: pointer; }
 /*  ------brand   style   */
 .active_a { background-color: #4B82EC; }
 
+.cantent_box { margin-top: 15px; margin-bottom: 15px; }
 .cantent_box ul { border: 1px solid #CCCCCC; border-radius: 5px 5px; margin-top: 10%; padding: 5px; }
 .cantent_box ul li { width: 100%; }
 .cantent_box ul li a { margin: auto; border-radius: 5px 5px; color: #000000; }
@@ -122,7 +130,7 @@ a { cursor: pointer; }
   .serve_top_p { margin-top: 20px; } }
 #serve_top_ma { margin-left: -16%; }
 
-.serve_top_row { margin: 0 10%; margin-bottom: 1%; }
+.serve_top_row { margin: 2% 10%; }
 .serve_top_row img { margin-top: 2%; }
 .serve_top_row div:nth-child(4) { margin-top: 3%; }
 .serve_top_row div:nth-child(4) p:first-child { font-size: 20px; color: #F67A2F; margin-bottom: 0; }

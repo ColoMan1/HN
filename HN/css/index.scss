@@ -1,6 +1,6 @@
 
 body,input,button{
-    font-family: "SimSun","SimHei","Microsoft YaHei","NSimSun","FangSong","KaiTi","FangSong";
+    font-family: "Microsoft YaHei","SimSun","SimHei","NSimSun","FangSong","KaiTi",;
 }
 
 a{
@@ -37,6 +37,20 @@ $fontcolor:#FFFFFF;
     .navbar-header{
         height: 100px;
     }
+    .navbar-fixed-bottom{
+        position: none;
+    }
+}
+@media (min-width:768px){
+    .navbar-fixed{
+        bottom: 0;
+        margin-bottom: 0;
+        border-width: 1px 0 0;
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
 }
 @media (min-width:992px) { 
     .nav_top{
@@ -53,8 +67,8 @@ $fontcolor:#FFFFFF;
     .nav_li{
         margin-right: 1px;
     }
-    #navbar-collapse #nav_ul_span{
-        border-right: none;
+    .nav_sx1,.nav_sx2{
+        display: none;
     }
 }
 .collapse{
@@ -68,6 +82,9 @@ $fontcolor:#FFFFFF;
             a:hover{
                 color: $fontcolor;
             }
+            a:focus{
+                color: #4B82EC;
+            }
         }
     }
 }
@@ -77,28 +94,24 @@ $fontcolor:#FFFFFF;
     font-size: 18px;
     a{
         padding: 0;
+        padding-top: 20px;line-height: 52px;
     }
     li{
         padding: 0;
     }
-    span{
-        display: inline-block;
-        border-right: 1px solid white;
-        padding-right: 18px;
-        height: 50px;
-    }
-    .nav_ul_li{
-        height: 75px;
-        border-bottom: 2px solid 
+
+    span:first-child{
+        width: 72px;
     }
 }
 .nav_top{
     background-color: #182141;
-    .nav_box{
-        margin-left: 7%;
-    }
 }
-
+.span_active{
+    display: inline-block;
+    height: 55px;
+    border-bottom: 2px solid #4B82EC;
+}
 .top_right{
     margin-top: 35px;
     .nav_top_left{
@@ -109,8 +122,20 @@ $fontcolor:#FFFFFF;
         padding: 0;
         text-align: center;
     }
-}
 
+}
+.nav_sx2{
+    height: 55px;
+    border-left: 2px solid #3E4458;
+    float: left;
+    margin-top: 20px;
+}
+.nav_sx1{
+    height: 55px;
+    border-left: 2px solid #151B2F;
+    float: left;
+    margin-top: 20px;
+}
 .navbar-fixed-top{
     border-width:0;
 }
@@ -271,13 +296,15 @@ $marginleft:20px;
     background-color: #4B82EC;
 }
 .cantent_box{
+    margin-top: 15px;
+    margin-bottom: 15px;
     ul{
         border: 1px solid #CCCCCC;
         border-radius: 5px 5px;
         margin-top: 10%;
         padding: 5px;
         li{
-            width: 100%;        
+            width: 100%;
             a{
                 margin: auto;
                 border-radius: 5px 5px;
@@ -477,8 +504,8 @@ $marginleft:20px;
     margin-left: -16%;
 }
 .serve_top_row{
-    margin: 0 10%;
-    margin-bottom: 1%;
+    margin: 2% 10%;
+
     img{
         margin-top: 2%;
     }
