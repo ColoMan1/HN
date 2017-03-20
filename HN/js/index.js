@@ -16,14 +16,27 @@ $(function(){
 	var $span = $('#nav_ul span');
 	var $li = $('#nav_ul li');
 	$li.click(function(){
-		$span.removeClass('span_active')
+		$span.removeClass('span_active');
 		var $index = $li.index(this);
-		console.log($index)
-		$span.eq($index).addClass('span_active').siblings().removeClass('span_active')
+		console.log($index);
+		$span.eq($index).addClass('span_active').siblings().removeClass('span_active');
 	})
-
+	  
 })
 
+$(function(){
+	var $li = $('.yuan_box ul li');	
+
+	$($li).click(function(event) {
+		var $index = $li.index(this);
+		console.log($index);
+		if( $index == 1){
+			$('.three_wenzi p').addClass('animated bounceInLeft');
+			console.log($index)
+		};
+	});
+
+})
 
 
 
