@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body, input, button { font-family: "Microsoft YaHei", "SimSun", "SimHei", "NSimSun", "FangSong", "KaiTi"; }
 
 a { cursor: pointer; }
@@ -65,7 +66,7 @@ a { cursor: pointer; }
 .six_box img { height: 150px; margin-bottom: 90px; transition: all 1s linear; -moz-transition: all 1s linear; /* Firefox 4 */ -webkit-transition: all 1s linear; /* Safari and Chrome */ -o-transition: all 1s linear; }
 .six_box img:hover { transform: rotateY(180deg); -webkit-transform: rotateY(180deg); /* Safari and Chrome */ -moz-transform: rotateY(180deg); /* Firefox */ }
 .six_box .six_top { margin-top: 40px; line-height: 160px; }
-.six_box .six_top span { color: #0185E3; font-size: 20px; }
+.six_box .six_top span { color: #0185E3; font-size: 25px; }
 .six_box .six_bottom { margin: 0; }
 .six_box .six_bottom span { color: #FAFAFB; }
 
@@ -150,5 +151,17 @@ a { cursor: pointer; }
 .serve_buttom_box { margin: 4% 10%; }
 .serve_buttom_box img { margin-right: 20px; }
 .serve_buttom_box .serve_buttom { line-height: 80px; color: #4D83EC; margin-left: 5px; }
+
+/*  ------路member   style   */
+.member_content_box { background-color: rgba(0, 0, 0, 0.5); height: 325px; width: 300px; padding-top: 2%; position: absolute; top: 20%; right: 18%; }
+.member_content_box .mima { color: white; margin-left: 5%; margin-bottom: 10%; }
+.member_content_box .member_input_top { height: 35px; margin: 0 auto; }
+.member_content_box .member_input_topleft, .member_content_box .member_input_bottomleft { background-color: #DDDDDD; width: 35px; height: 35px; float: left; border-radius: 3px 0 0 3px; }
+.member_content_box .first { color: white; margin: 0 auto; font-size: 25px; }
+.member_content_box .member_input_topright, .member_content_box .member_input_bottomright { border: 0; float: left; height: 35px; padding-left: 5px; width: 87%; }
+.member_content_box .last { color: white; margin: 0 auto; font-size: 28px; }
+.member_content_box .member_btn { width: 100%; padding: 0; border: 0; height: 40px; color: white; background-color: #FF4400; margin-top: 7%; border-radius: 5px; }
+.member_content_box .member_bottom { color: white; margin-left: 50%; margin-top: 22%; }
+.member_content_box .member_span { margin-left: 10%; }
 
 /*# sourceMappingURL=index.css.map */
