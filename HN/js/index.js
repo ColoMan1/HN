@@ -25,7 +25,7 @@ $(function(){
 })
 
 $(function(){
-	var $li = $('.yuan_box ul li');	
+	var $li = $('.yuan_box ul li');
 
 	$($li).click(function(event) {
 		$('.home_animated1').removeClass('animated flip');

@@ -135,7 +135,6 @@ a { cursor: pointer; }
 .serve_top_row img { margin-top: 2%; }
 .serve_top_row div:nth-child(4) { margin-top: 3%; }
 .serve_top_row div:nth-child(4) p:first-child { font-size: 20px; color: #F67A2F; margin-bottom: 0; }
-.serve_top_row .serve_top_p { padding-left: 7%; }
 .serve_top_row .serve_top_p P { margin-bottom: 0; }
 .serve_top_row .serve_top_p p:first-child { border-bottom: 1px dashed #CCCCCC; padding-bottom: 5px; margin-bottom: 5px; }
 
@@ -163,5 +162,12 @@ a { cursor: pointer; }
 .member_content_box .member_btn { width: 100%; padding: 0; border: 0; height: 40px; color: white; background-color: #FF4400; margin-top: 7%; border-radius: 5px; }
 .member_content_box .member_bottom { color: white; margin-left: 50%; margin-top: 22%; }
 .member_content_box .member_span { margin-left: 10%; }
+
+/*  ------ contact   style   */
+@media (max-width: 992px) { .contact_input_box { padding-right: 0; } }
+.contact_img { margin-top: 20px; margin-bottom: 20px; }
+
+.contact_input_box { padding-left: 0; }
+.contact_input_box input { margin-bottom: 13px; }
 
 /*# sourceMappingURL=index.css.map */

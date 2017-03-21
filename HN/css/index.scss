@@ -518,7 +518,7 @@ $marginleft:20px;
         }
     }
     .serve_top_p{
-        padding-left: 7%;
+        
         P{
             margin-bottom: 0;
         }
@@ -646,9 +646,28 @@ $marginleft:20px;
     }
 }
 
+/*
+ *
+ * ------ contact   style
+ * 
+ * 
+ * */
+@media (max-width:992px) { 
+    .contact_input_box{
+        padding-right: 0;
+    }
+}
+.contact_img{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.contact_input_box{
+    padding-left: 0;
 
-
-
+    input{
+        margin-bottom: 13px;
+    }
+}
 
 
 

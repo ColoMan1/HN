@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1489742061821'); /* IE9*/
-  src: url('iconfont.eot?t=1489742061821#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1489742061821') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1489742061821') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1489742061821#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1490104737761'); /* IE9*/
+  src: url('iconfont.eot?t=1490104737761#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1490104737761') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1490104737761') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1490104737761#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -20,4 +20,8 @@
 .icon-suo:before { content: "\e6cb"; }
 
 .icon-ren:before { content: "\e667"; }
+
+.icon-duigou:before { content: "\e63d"; }
+
+.icon-x:before { content: "\e63f"; }
 
