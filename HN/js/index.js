@@ -66,8 +66,52 @@ $(function(){
 
 })
 
+$(function(){
+	$(window).scroll(function(){
+		var $st = $(this).scrollTop();
+		console.log($st);
+		if( $st >= 700 && $st <= 1642){
+			$('.home_animated1').addClass('animated flip');
+			$('.home_animated2').addClass('animated swing');
+		}
+		if( $st >= 1500 && $st <= 2442){
+			$('.home_animated3').addClass('animated bounceInLeft');
+			$('.home_animated4').addClass('animated lightSpeedIn');
+			$('.home_animated5').addClass('animated bounceInLeft');
+			$('.home_animated6').addClass('animated lightSpeedIn');	
+		}
+		if( $st >= 2200 && $st <= 3142){
+			$('.home_animated7').addClass('animated rotateInDownLeft');			
+			$('.home_animated8').addClass('animated rotateInDownRight');			
+			$('.home_animated9').addClass('animated rotateInDownLeft');			
+			$('.home_animated10').addClass('animated rotateInDownRight');
+		}
+		if( $st > 2900){
+			$('.home_animated11').addClass('animated wobble');
+		}
+	});
+})
 
-
+$(function(){
+	var $row = $('.news_row')
+	$('.news_img_box').eq(0).attr('id','news_img_change');
+	$('.news_p_change').eq(0).attr('id','news_p_change');
+	$('.news_ck').eq(0).attr('id','news_span_change');
+	$('.news_hx').eq(0).attr('id','news_img_change');
+	
+	$row.click(function(){
+		var $index = $row.index(this);
+		$('.news_img_box').removeAttr('id');
+		$('.news_p_change').removeAttr('id');
+		$('.news_ck').removeAttr('id');
+		$('.news_hx').removeAttr('id');
+		
+		$('.news_img_box').eq($index).attr('id','news_img_change');
+		$('.news_p_change').eq($index).attr('id','news_p_change');
+		$('.news_ck').eq($index).attr('id','news_span_change');
+		$('.news_hx').eq($index).attr('id','news_img_change');
+	})
+})
 
 
 
