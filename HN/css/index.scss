@@ -393,6 +393,7 @@ $marginleft:20px;
         @include border;
         input{
             @include input;
+            width: 89%;
         }
         button{
             background-color: #4B82EC;
@@ -604,7 +605,7 @@ $marginleft:20px;
     padding-top: 2%;
     position: absolute;
     top: 110px;
-    left: 965px;
+    left: 960px;
     .mima{
         color: white;
         margin-left: 5%;

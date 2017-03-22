@@ -78,7 +78,7 @@ $(function(){
 			$('.home_animated3').addClass('animated bounceInLeft');
 			$('.home_animated4').addClass('animated lightSpeedIn');
 			$('.home_animated5').addClass('animated bounceInLeft');
-			$('.home_animated6').addClass('animated lightSpeedIn');	
+			$('.home_animated6').addClass('animated lightSpeedIn');
 		}
 		if( $st >= 2200 && $st <= 3142){
 			$('.home_animated7').addClass('animated rotateInDownLeft');			
@@ -104,8 +104,6 @@ $(function(){
 		$('.news_img_box').removeAttr('id');
 		$('.news_p_change').removeAttr('id');
 		$('.news_ck').removeAttr('id');
-		$('.news_hx').removeAttr('id');
-		
 		$('.news_img_box').eq($index).attr('id','news_img_change');
 		$('.news_p_change').eq($index).attr('id','news_p_change');
 		$('.news_ck').eq($index).attr('id','news_span_change');
@@ -113,7 +111,19 @@ $(function(){
 	})
 })
 
-
+$(function(){
+	$('.register_test').blur(function(event) {
+		var $test = /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/;
+		var $val = $('.register_test').val();
+			console.log($val)
+		if($test.test($val)){
+			$('.register_test').append('<i class="iconfont">&#xe63d;</i>')
+		}else{
+			alert(2)
+		}
+	});
+	
+})
 
 
 
