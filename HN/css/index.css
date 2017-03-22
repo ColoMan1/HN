@@ -161,7 +161,7 @@ a { cursor: pointer; }
 .serve_buttom_box .serve_buttom { line-height: 80px; color: #4D83EC; margin-left: 5px; }
 
 /*  ------路member   style   */
-.member_content_box { background-color: rgba(0, 0, 0, 0.5); height: 325px; width: 300px; padding-top: 2%; position: absolute; top: 20%; right: 18%; }
+.member_content_box { background-color: rgba(0, 0, 0, 0.5); height: 325px; width: 300px; padding-top: 2%; position: absolute; top: 110px; left: 965px; }
 .member_content_box .mima { color: white; margin-left: 5%; margin-bottom: 10%; }
 .member_content_box .member_input_top { height: 35px; margin: 0 auto; }
 .member_content_box .member_input_topleft, .member_content_box .member_input_bottomleft { background-color: #DDDDDD; width: 35px; height: 35px; float: left; border-radius: 3px 0 0 3px; }
