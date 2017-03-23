@@ -1,4 +1,8 @@
-
+/*
+ * 
+ * -------------------------------------------------------------------brand   tap切换效果
+ * 
+ * */
 $(function(){
 	var $a = $('.cantent_box ul li a');
 	var $box = $('.bigbox .brand_cantent_box');
@@ -11,7 +15,11 @@ $(function(){
 	});
 })
 
-
+/*
+ * 
+ * -------------------------------------------------------------------nav    导航栏选中时的样式
+ * 
+ * */
 $(function(){
 	var $span = $('#nav_ul span');
 	var $li = $('#nav_ul li');
@@ -23,10 +31,13 @@ $(function(){
 	})
 	  
 })
-
+/*
+ * 
+ * -------------------------------------------------------------------home  主页右侧圆点点击时的动画效果
+ * 
+ * */
 $(function(){
 	var $li = $('.yuan_box ul li');
-
 	$($li).click(function(event) {
 		$('.home_animated1').removeClass('animated flip');
 		$('.home_animated2').removeClass('animated swing');
@@ -65,11 +76,14 @@ $(function(){
 	});
 
 })
-
+/*
+ * 
+ * -------------------------------------------------------------------home   主页滚动时的动画效果
+ * 
+ * */
 $(function(){
 	$(window).scroll(function(){
 		var $st = $(this).scrollTop();
-		console.log($st);
 		if( $st >= 700 && $st <= 1642){
 			$('.home_animated1').addClass('animated flip');
 			$('.home_animated2').addClass('animated swing');
@@ -91,7 +105,11 @@ $(function(){
 		}
 	});
 })
-
+/*
+ * 
+ * -------------------------------------------------------------------news   新闻选中时的样式变化
+ * 
+ * */
 $(function(){
 	var $row = $('.news_row')
 	$('.news_img_box').eq(0).attr('id','news_img_change');
@@ -110,20 +128,91 @@ $(function(){
 		$('.news_hx').eq($index).attr('id','news_img_change');
 	})
 })
-
+/*
+ * 
+ * -------------------------------------------------------------------register   注册页面验证是icon的变化包括颜色
+ * 
+ * */
 $(function(){
 	$('.register_test').blur(function(event) {
+		if($('.icon_red').hasClass('icon_red')){
+			$('.icon_red').remove();
+		};
+		if($('.icon_green').hasClass('icon_green')){
+			$('.icon_green').remove();
+		};
 		var $test = /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/;
 		var $val = $('.register_test').val();
 			console.log($val)
 		if($test.test($val)){
-			$('.register_test').append('<i class="iconfont">&#xe63d;</i>')
+			$('.register_test').after('<i class="iconfont icon_green" style="color:green;">&#xe63d;</i>')
 		}else{
-			alert(2)
-		}
+			$('.register_test').after('<i class="iconfont icon_red">&#xe63f;</i>')
+		};
+	});
+})
+
+/*
+ * 
+ * -------------------------------------------------------------------register   注册内部页面跳转时导航图片的颜色变换
+ * 
+ * */
+$(function(){     
+	$('.register_bottom_but').click(function(){
+		$('.register_img_change1').attr('src','../images/1_1.png')
+		$('.register_img_change2').attr('src','../images/2_2.png')
+	})
+})
+/*
+ * 
+ * -------------------------------------------------------------------register   注册密码强度
+ * 
+ * */
+$(function(){
+	$('.input_check').focus(function(){
+		$('.register_password_check').css('display','block')
+	});
+	$('.input_check').blur(function(event){
+		$('.register_password_check').css('display','none');
+	});
+	$('.input_check').keyup(function(){    
+		var $test1 = /^(?:\d+|[a-zA-Z]+|[!@#$%^&*]+){6,12}$/;   //  弱：纯数字，纯字母，纯特殊字符
+		var $test2 = /^(?![a-zA-z]+$)(?!\d+$)(?![!@#$%^&*]+$)[a-zA-Z\d!@#$%^&*]+$/;   //中：字母+数字，字母+特殊字符，数字+特殊字符
+		var $test3 = /^(?![a-zA-z]+$)(?!\d+$)(?![!@#$%^&*]+$)(?![a-zA-z\d]+$)(?![a-zA-z!@#$%^&*]+$)(?![\d!@#$%^&*]+$)[a-zA-Z\d!@#$%^&*]+$/;   //强：字母+数字+特殊字符
+		if($test1.test($('.input_check').val())){    
+			console.log($('.input_check').val());
+			if($test2.test($('.input_check').val())){    
+				$('.password_border1').css('border','2px solid #ccc');
+				$('.password_border2').css('border','2px solid yellow');
+				if($test3.test($('.input_check').val())){   
+					$('.password_border1').css('border','2px solid #ccc')
+					$('.password_border2').css('border','2px solid #ccc')
+					$('.password_border3').css('border','2px solid green')
+				}else{         
+					$('.password_border1').css('border','2px solid #ccc')
+					$('.password_border2').css('border','2px solid yellow')
+					$('.password_border3').css('border','2px solid #ccc')
+				};
+			}else{
+				$('.password_border1').css('border','2px solid red')
+				$('.password_border2').css('border','2px solid #ccc')
+				$('.password_border3').css('border','2px solid #ccc')
+			};
+		}else{
+			$('.password_border1').css('border','2px solid red')
+			$('.password_border2').css('border','2px solid #ccc')
+			$('.password_border3').css('border','2px solid #ccc')
+		};
 	});
 	
-})
+	
+	
+});
+
+
+
+
+
 
 
 

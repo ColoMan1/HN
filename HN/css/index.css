@@ -113,7 +113,18 @@ a { cursor: pointer; }
 .register_cantent_box .register_inpbox_1, .register_cantent_box .register_inpbox_2, .register_cantent_box .register_inpbox_3, .register_cantent_box .register_inpbox_4 { height: 60px; }
 .register_cantent_box .finish_border { border: 2px solid #CCCCCC; width: 91%; margin: 0 auto; margin-bottom: 40px; }
 .register_cantent_box .finish_border p { margin: 45px 0; }
-.register_cantent_box .finish_border button { height: 47px; margin-bottom: 50px; background-color: #4374D4; color: white; }
+.register_cantent_box .finish_border button { height: 47px; margin-bottom: 50px; background-color: #4374D4; }
+.register_cantent_box .finish_border button a { color: white; }
+.register_cantent_box .register_password_check { display: none; }
+.register_cantent_box .register_password_check span { display: block; }
+.register_cantent_box .register_password_check div { margin-top: 5px; }
+.register_cantent_box .register_password_check div .password_border1 { border: 2px solid red; }
+.register_cantent_box .register_password_check div .password_border2 { border: 2px solid #CCCCCC; }
+.register_cantent_box .register_password_check div .password_border3 { border: 2px solid #CCCCCC; }
+
+.icon_red { color: red; }
+
+.icon_green { color: green; }
 
 /*  ------news   style   */
 .news_navbar { margin-bottom: 0; }

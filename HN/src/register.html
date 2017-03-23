@@ -85,10 +85,10 @@
         </div>
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <img src="../images/1_2.png" alt="Responsive image" class="col-md-3 col-sm-3 col-xs-3 img-responsive" />
-                <img src="../images/2_1.png" alt="Responsive image" class="col-md-3 col-sm-3 col-xs-3 img-responsive" />
-                <img src="../images/3_1.png" alt="Responsive image" class="col-md-3 col-sm-3 col-xs-3 img-responsive" />
-                <img src="../images/4_1.png" alt="Responsive image" class="col-md-3 col-sm-3 col-xs-3 img-responsive" />
+                <img src="../images/1_2.png" alt="Responsive image" class="col-md-3 col-sm-3 col-xs-3 img-responsive register_img_change1" />
+                <img src="../images/2_1.png" alt="Responsive image" class="col-md-3 col-sm-3 col-xs-3 img-responsive register_img_change2" />
+                <img src="../images/3_1.png" alt="Responsive image" class="col-md-3 col-sm-3 col-xs-3 img-responsive register_img_change3" />
+                <img src="../images/4_1.png" alt="Responsive image" class="col-md-3 col-sm-3 col-xs-3 img-responsive register_img_change4" />
             </div>
         </div>
         <div class="row" style="margin-top: 50px;">
@@ -105,25 +105,36 @@
                 <div class="register_inpbox_2 col-sm-12 col-xs-12 col-md-12">
                     <div class="register_input_2">
                         <input type="text" placeholder="     请输入验证码" />
-                        <i class="iconfont">&#xe63f;</i>
                         <button type="submit" class="col-sm-12 col-xs-12 col-md-12" col-sm-8>获取验证码</button>
-                        
+                  
                     </div>
                 </div>
                 <!--3-->
                 <div class="register_inpbox_3 col-sm-12 col-xs-12 col-md-12">
                     <div class="register_input_3">
                         <i class="iconfont">&#xe6cb;</i>
-                        <input type="text" placeholder="请输入6-12位登录密码" class="input_width" />
-                        <i class="iconfont">&#xe63f;</i>
+                        <input type="password" placeholder="请输入6-12位登录密码" class="input_width input_check" maxlength="12"/>
+                        <div class="register_password_check">
+                        	<div class="col-lg-4">
+                        		<div class="password_border1"></div>
+                        		<span class="text-center">弱</span>
+                        	</div>
+                        	<div class="col-lg-4">
+                        		<div class="password_border2"></div>
+                        		<span class="text-center">中</span>
+                        	</div>
+                        	<div class="col-lg-4">
+                        		<div class="password_border3"></div>
+                        		<span class="text-center">强</span>
+                        	</div>
+                        </div>
                     </div>
                 </div>
                 <!--4-->
                 <div class="register_inpbox_4 col-sm-12 col-xs-12 col-md-12">
                     <div class="register_input_4">
                         <i class="iconfont">&#xe6cb;</i>
-                        <input type="text" placeholder="密码确认(必填)" class="input_width" />
-                        <i class="iconfont">&#xe63f;</i>
+                        <input type="password" placeholder="密码确认(必填)" class="input_width" />
                     </div>
                 </div>
                 <div class="register_inpbox_5 col-sm-12 col-xs-12 col-md-12">
@@ -159,6 +170,8 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/index.js"></script>
     <script src="../js/html5media.min.js.js"></script>
+    <script src="../js/placeholder.js"></script>
+    <script src="../js/placeholder.js"></script>
 </body>
 
 </html>

@@ -437,11 +437,38 @@ $marginleft:20px;
             height: 47px;
             margin-bottom: 50px;
             background-color: #4374D4;
-            color: white;
+            a{
+                color: white;
+            }
+        }
+    }
+    .register_password_check{
+        display: none;
+        span{
+            display: block;
+        }
+        div{
+            margin-top: 5px;
+           .password_border1{
+               border: 2px solid red;
+           }
+           .password_border2{
+               border: 2px solid #CCCCCC;
+           }
+           .password_border3{
+               border: 2px solid #CCCCCC;
+           }
         }
     }
 }
 
+
+.icon_red{
+    color: red;
+}
+.icon_green{
+    color: green;
+}
 /*
  *
  * ------news   style
