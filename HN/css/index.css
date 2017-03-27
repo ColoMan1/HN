@@ -18,6 +18,8 @@ a { cursor: pointer; }
   .nav_box .top_right { margin-top: 65px; }
   .nav_li { margin-right: 1px; }
   .nav_sx1, .nav_sx2 { display: none; } }
+.navbar { border: 0; }
+
 .collapse .nav li a { height: 90px; line-height: 90px; color: #FFFFFF; }
 .collapse .nav li a:hover { color: #FFFFFF; }
 .collapse .nav li a:focus { color: #4B82EC; }
@@ -185,9 +187,14 @@ a { cursor: pointer; }
 
 /*  ------ contact   style   */
 @media (max-width: 992px) { .contact_input_box { padding-right: 0; } }
+@media (min-width: 992px) and (max-width: 1200px) { .top_right { padding-right: 0; } }
+.top_right { float: right; }
+
 .contact_img { margin-top: 20px; margin-bottom: 20px; }
 
 .contact_input_box { padding-left: 0; }
 .contact_input_box input { margin-bottom: 13px; }
+
+.denglu_yh p { color: white; }
 
 /*# sourceMappingURL=index.css.map */

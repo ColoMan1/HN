@@ -174,12 +174,15 @@ $(function(){
 	});
 	$('.input_check').blur(function(event){
 		$('.register_password_check').css('display','none');
+		if($('.input_check').val().length < 6){
+			alert('密码不能低于6位')
+		}
 	});
 	$('.input_check').keyup(function(){    
 		var $test1 = /^(?:\d+|[a-zA-Z]+|[!@#$%^&*]+){6,12}$/;   //  弱：纯数字，纯字母，纯特殊字符
 		var $test2 = /^(?![a-zA-z]+$)(?!\d+$)(?![!@#$%^&*]+$)[a-zA-Z\d!@#$%^&*]+$/;   //中：字母+数字，字母+特殊字符，数字+特殊字符
 		var $test3 = /^(?![a-zA-z]+$)(?!\d+$)(?![!@#$%^&*]+$)(?![a-zA-z\d]+$)(?![a-zA-z!@#$%^&*]+$)(?![\d!@#$%^&*]+$)[a-zA-Z\d!@#$%^&*]+$/;   //强：字母+数字+特殊字符
-		if($test1.test($('.input_check').val())){    
+		if($test1.test($('.input_check').val())){
 			console.log($('.input_check').val());
 			if($test2.test($('.input_check').val())){    
 				$('.password_border1').css('border','2px solid #ccc');
@@ -203,11 +206,45 @@ $(function(){
 			$('.password_border2').css('border','2px solid #ccc')
 			$('.password_border3').css('border','2px solid #ccc')
 		};
+
 	});
-	
-	
-	
 });
+/*
+ * 
+ * -------------------------------------------------------------------register   密码确认
+ * 
+ * */
+$(function(){
+
+	$($('.input_qr')).keyup(function(){
+		if($('.icon_red').hasClass('icon_red')){
+			$('.icon_red').remove();
+		};
+		if($('.icon_green').hasClass('icon_green')){
+			$('.icon_green').remove();
+		};
+		var $val = $('.input_qr').val();
+		console.log($val)
+		if($('.input_check').val() == $val){
+			$('.input_qr').after('<i class="iconfont icon_green" style="color:green;">&#xe63d;</i>')
+		}else{
+			$('.input_qr').after('<i class="iconfont icon_red">&#xe63f;</i>')
+		};
+	});
+
+})
+
+$(function(){
+	$('.register_bottom_but').click(function(){
+		if($('.register_input_1 .iconfont').hasClass('icon_red') && $('.register_input_4 iconfont').hasClass('icon_red')){
+			$('.register_bottom_but').attr('disabled','disabled')
+		}
+	})
+})
+
+
+
+
 
 
 

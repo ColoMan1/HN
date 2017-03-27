@@ -71,6 +71,9 @@ $fontcolor:#FFFFFF;
         display: none;
     }
 }
+.navbar{
+    border: 0;
+}
 .collapse{
     .nav {
         li{
@@ -700,6 +703,15 @@ $marginleft:20px;
     .contact_input_box{
         padding-right: 0;
     }
+    
+}
+@media (min-width:992px) and (max-width:1200px){
+    .top_right{
+        padding-right: 0;
+    }
+}
+.top_right{
+    float: right;
 }
 .contact_img{
     margin-top: 20px;
@@ -707,12 +719,15 @@ $marginleft:20px;
 }
 .contact_input_box{
     padding-left: 0;
-
     input{
         margin-bottom: 13px;
     }
 }
-
+.denglu_yh{
+    p{
+        color: white;
+    }
+}
 
 
 
