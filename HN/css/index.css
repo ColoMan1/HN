@@ -3,6 +3,9 @@ body, input, button { font-family: "Microsoft YaHei", "SimSun", "SimHei", "NSimS
 
 a { cursor: pointer; }
 
+@font-face { font-family: 'iconfont'; src: url("../font/iconfont.eot"); src: url("../font/iconfont.eot?#iefix") format("embedded-opentype"), url("../font/iconfont.woff") format("woff"), url("../font/iconfont.ttf") format("truetype"), url("../font/iconfont.svg#iconfont") format("svg"); }
+.iconfont { font-family: "iconfont" !important; font-size: 16px; font-style: normal; -webkit-font-smoothing: antialiased; -webkit-text-stroke-width: 0.2px; -moz-osx-font-smoothing: grayscale; }
+
 /*! yuan  style*/
 .yuan_box { position: fixed; left: 95%; top: 40%; }
 .yuan_box .yuan { border-radius: 50%; height: 10px; width: 10px; background-color: #84C0FF; margin-top: 15px; display: block; padding: 5px; }
@@ -196,5 +199,21 @@ a { cursor: pointer; }
 .contact_input_box input { margin-bottom: 13px; }
 
 .denglu_yh p { color: white; }
+
+/*  ------ forget_paddword   style   */
+.forget_content { width: 1024px; margin: 0 auto; overflow: hidden; margin-top: 30px; }
+.forget_content p { font-size: 17px; font-weight: bold; color: #656565; }
+.forget_content .content_p1 { padding-left: 10px; }
+.forget_content .content_p2 { border-bottom: 3px solid #407AEC; width: 100px; float: left; margin-top: -1px; }
+.forget_content .content_p3 { border-bottom: 1px solid #6492ED; width: 924px; float: right; }
+.forget_content .forget_input1, .forget_content .forget_input2 { text-align: center; margin: 80px 0 30px 0; }
+.forget_content .forget_input1 div, .forget_content .forget_input2 div { display: inline-block; border: 1px solid #97B5EF; width: 250px; }
+.forget_content .forget_input1 input, .forget_content .forget_input2 input { outline: none; border: 0; width: 100%; }
+.forget_content .forget_input2 { padding-left: 14px; margin: 0; }
+.forget_content .forget_yzm { text-align: center; margin: 15px 0; padding-left: 188px; }
+.forget_content .forget_yzm img { height: 25px; width: 105px; }
+.forget_content button { height: 40px; width: 250px; margin-left: 423px; color: white; background: #5696EF; border: 0; border-radius: 4px; }
+.forget_content .forget_bottom { text-align: center; padding-left: 65px; margin-top: 20px; }
+.forget_content .forget_bottom span { color: red; }
 
 /*# sourceMappingURL=index.css.map */

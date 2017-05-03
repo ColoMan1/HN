@@ -11,7 +11,7 @@ $(function(){
 		$(".cantent_box ul li a:first-child").removeClass("active_a");
 		var $index = $a.index(this);
 		console.log($index);
-    	$box.eq($index).show(500).siblings().hide(500);
+    	$box.eq($index).show().siblings().hide();
 	});
 })
 

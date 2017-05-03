@@ -76,18 +76,8 @@
                 <div class="nav_sx1"></div>
                 <div class="nav_sx2"></div>
                 <div class="top_right col-md-2">
-                	 
-                    <div class="nav_top_left col-md-6 col-sm-1">
-                        <a href="register.html">
-                            <img src="../images/top1.png" alt="Responsive image" class="img-responsive" style="height: 20px; width: 20px;float: left;" />
-                            <p>注册</p>
-                        </a>
-                    </div>
-                    <div class="nav_top_right col-md-6 col-sm-1">
-                        <a href="member.html">
-                            <img src="../images/top2.png" alt="Responsive image" class="img-responsive" style="height: 20px; width: 20px;float: left;" />
-                            <p>登录</p>
-                        </a>
+						<p class="top_right_p" style="color: white;">用户名：<span>fx@163.com</span><i class="iconfont">&#xe6d6;</i></p>
+                        
                     </div>
                 </div>
             </div>
@@ -98,10 +88,22 @@
   	------第一屏   视屏
   	
   	-->
-		<video src="../video/video.mp4" controls="controls" id="video" style="display: none;">
+<!--  	<div id="1" style="height: 752px;width: 100%;background:transparent url('../images/video.png') 50% 50% no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;">
+		<video src="../video/video.mp4" poster="../images/0.png" autobuffer id="video" style="height: 100%;width: 100%;">
 		</video>
-		<div id="1">
+		</div>-->
+		<div id="1" style="position: relative;">
 			<img id="fullScreenBtn" src="../images/video.png" style="height: 100%; width: 100%;"></img>
+			<div id="videobox" style="position: absolute;top: 0;z-index: -1;">
+				<video controls="controls" id="video">
+					<source src="../video/video.mp4" type="video/mp4" />
+					<source src="../video/video.webm" type="video/webm" />
+					<source src="../video/video.ogg" type="video/ogg" />
+					<object data="../video/video.mp4" width="100%" height="100%">
+						<embed width="100%" height="100%" src="../video/video.mp4" />
+					</object>
+				</video>
+			</div>
 		</div>
 	 	<!--
   		
@@ -117,13 +119,13 @@
 	</div>
   <div class="col-md-8 col-md-offset-2 home_animated2">
 		
-    	<img src="../images/two1.png" alt="Responsive image" class="img-responsive center-block col-md-4 col-sm-4 col-xs-4"/>
+    	<img src="../images/two1.png" alt="Responsive image" class="img-responsive center-block col-lg-4 col-md-4 col-sm-4 col-xs-4"/>
 
 
-    	<img src="../images/two2.jpg" alt="Responsive image" class="img-responsive center-block col-md-4 col-sm-4 col-xs-4"/>
+    	<img src="../images/two2.jpg" alt="Responsive image" class="img-responsive center-block col-lg-4 col-md-4 col-sm-4 col-xs-4"/>
 
 
-    	<img src="../images/two3.png" alt="Responsive image" class="img-responsive center-block col-md-4 col-sm-4 col-xs-4"/>
+    	<img src="../images/two3.png" alt="Responsive image" class="img-responsive center-block col-lg-4 col-md-4 col-sm-4 col-xs-4"/>
 
   </div>
 </div>
@@ -221,13 +223,34 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/index.js"></script>
-    <script src="../js/html5media.min.js.js"></script>
+    <script src="../js/html5media.min.js"></script><!--解决video兼容-->
     <script src="../js/animate/anime.min.js"></script>
     <script type="text/javascript">
+    //反射調用
+			var invokeFieldOrMethod = function(element, method) {
+				var usablePrefixMethod;
+				["webkit", "moz", "ms", "o", ""].forEach(function(prefix) {
+					if(usablePrefixMethod) return;
+					if(prefix === "") {
+						// 无前缀，方法首字母小写
+						method = method.slice(0, 1).toLowerCase() + method.slice(1);
+					}
+					var typePrefixMethod = typeof element[prefix + method];
+					if(typePrefixMethod + "" !== "undefined") {
+						if(typePrefixMethod === "function") {
+							usablePrefixMethod = element[prefix + method]();
+						} else {
+							usablePrefixMethod = element[prefix + method];
+						}
+					}
+				});
 
-			//進入全屏
+				return usablePrefixMethod;
+			};
+
+			//进入全屏
 			function launchFullscreen(element) {
-				//此方法不可以在異步任務中執行，否則火狐無法全屏
+				//此方法不可以在异步任务中执行，否则火狐无法全屏
 				if(element.requestFullscreen) {
 					element.requestFullscreen();
 				} else if(element.mozRequestFullScreen) {
@@ -248,13 +271,56 @@
 					docBody.style.cssText = cssText;
 					videobox.style.cssText = cssText + ';' + 'margin:0px;padding:0px;';
 					document.IsFullScreen = true;
-
 				}
 			}
+			
+			//退出全屏
+			function exitFullscreen() {
+				if(document.exitFullscreen) {
+					document.exitFullscreen();
+				} else if(document.msExitFullscreen) {
+					document.msExitFullscreen();
+				} else if(document.mozCancelFullScreen) {
+					document.mozCancelFullScreen();
+				} else if(document.oRequestFullscreen) {
+					document.oCancelFullScreen();
+				} else if(document.webkitExitFullscreen) {
+					document.webkitExitFullscreen();
+				} else {
+					var docHtml = document.documentElement;
+					var docBody = document.body;
+					var videobox = document.getElementById('videobox');
+					docHtml.style.cssText = "";                                                                                                                        
+					docBody.style.cssText = "";
+					videobox.style.cssText = "";
+					document.IsFullScreen = false;
+				}
+				return exitFullscreen;
+			}
+			                   
 			document.getElementById('fullScreenBtn').addEventListener('click', function() {
+				launchFullscreen(document.getElementById('video'));
+				document.getElementById('video').style.display = "block";
 				document.getElementById('video').play();
-				launchFullscreen(document.getElementById('video'));    //点击图片变成全屏
 			}, false);
+			
+			document.addEventListener("webkitfullscreenchange",function(e) {
+	        console.log('webkit');
+	        if (!document.webkitIsFullScreen) { //退出全屏暂停视频
+	            document.getElementById('video').pause();
+	        };
+	    }, false);
+	    document.addEventListener('mozfullscreenchange', function(){
+	        if (!document.mozFullScreen) { //退出全屏暂停视频
+	            document.getElementById('video').pause();
+	        };
+	    }, false);
+	    document.addEventListener("fullscreenchange", function(e) {
+	    	alert('aaa')
+	        if (!document.fullscreen) { //退出全屏暂停视频
+	            document.getElementById('video').pause();
+	        };
+	    }, false);
 		</script>
   </body>
 </html>
