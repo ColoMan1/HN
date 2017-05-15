@@ -43,7 +43,7 @@
 			}
     </style>
   </head>
-  <body data-spy="scroll" data-target="#myScrollspy" style="padding-top: 90px;">
+  <body data-spy="scroll" data-target="#myScrollspy" class="body_index">
 	
 <!--
   		
@@ -99,9 +99,9 @@
 					<source src="../video/video.mp4" type="video/mp4" />
 					<source src="../video/video.webm" type="video/webm" />
 					<source src="../video/video.ogg" type="video/ogg" />
-					<object data="../video/video.mp4" width="100%" height="100%">
+					<!--<object data="../video/video.mp4" width="100%" height="100%">
 						<embed width="100%" height="100%" src="../video/video.mp4" />
-					</object>
+					</object>-->
 				</video>
 			</div>
 		</div>
@@ -297,7 +297,6 @@
 				}
 				return exitFullscreen;
 			}
-			                   
 			document.getElementById('fullScreenBtn').addEventListener('click', function() {
 				launchFullscreen(document.getElementById('video'));
 				document.getElementById('video').style.display = "block";
@@ -306,21 +305,33 @@
 			
 			document.addEventListener("webkitfullscreenchange",function(e) {
 	        console.log('webkit');
+	      alert(1)
+	        
 	        if (!document.webkitIsFullScreen) { //退出全屏暂停视频
 	            document.getElementById('video').pause();
 	        };
 	    }, false);
-	    document.addEventListener('mozfullscreenchange', function(){
+	    document.addEventListener('mozfullscreenchange', function(e){
+	      console.log('moz');
+	      alert(1)
 	        if (!document.mozFullScreen) { //退出全屏暂停视频
 	            document.getElementById('video').pause();
 	        };
 	    }, false);
-	    document.addEventListener("fullscreenchange", function(e) {
-	    	alert('aaa')
-	        if (!document.fullscreen) { //退出全屏暂停视频
+
+			/*if (document.msExitFullscreen) {
+	      alert(4)
 	            document.getElementById('video').pause();
-	        };
-	    }, false);
+	      
+			}*/
+			
+/*var fullscreenElement = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement;
+var fullscreenEnabled = document.fullscreenEnabled || document.mozFullScreenEnabled || document.webkitFullscreenEnabled;
+if (fullscreenEnabled) {
+	      alert(4)
+	            document.getElementById('video').pause();
+	      
+			}*/
 		</script>
   </body>
 </html>
