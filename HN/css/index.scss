@@ -55,16 +55,30 @@ $fontcolor:#FFFFFF;
 .nav-tabs{
     border-bottom: none;
 }
+.top_right{
+    float: right;
+}
+@media (max-width:992px) { 
+    .contact_input_box{
+        padding-right: 0;
+    }
+    .contact_body{
+        padding-top: 185px;
+    }
+    .top_right{
+        float: none;
+    }
+}
+@media (min-width:992px) and (max-width:1200px){
+    .top_right{
+        padding-right: 0;
+    }
+}
 
 /*! nav  style*/
 @media screen and (device-width: 768px){
     .body_index{
         padding-top: 180px;
-    }
-    .top_right{
-        position: absolute;
-        top: 15px;
-        right: 0;
     }
 }
 @media (max-width:768px){
@@ -83,6 +97,9 @@ $fontcolor:#FFFFFF;
         left: 0;
         z-index: 1030;
     }
+    .nav_sx1,.nav_sx2{
+        display: none;
+    }
 }
 .navbar-fixed{
         bottom: 0;
@@ -98,7 +115,7 @@ $fontcolor:#FFFFFF;
         height: 90px;
     }
 }
-@media (min-width:768px) and (max-width: 992px){ 
+@media (min-width:768px) and (max-width: 992px){
     .navbar-header{
         margin-top: 6%;
     }
@@ -110,6 +127,14 @@ $fontcolor:#FFFFFF;
     }
     .nav_sx1,.nav_sx2{
         display: none;
+    }
+    .contact_body{
+        padding-top: 220px;
+    }
+    .top_right_p{
+        position: absolute;
+        top: 15px;
+        right: 0;
     }
 }
 .navbar{
@@ -797,19 +822,7 @@ $marginleft:20px;
  * 
  * 
  * */
-@media (max-width:992px) { 
-    .contact_input_box{
-        padding-right: 0;
-    }
-}
-@media (min-width:992px) and (max-width:1200px){
-    .top_right{
-        padding-right: 0;
-    }
-}
-.top_right{
-    float: right;
-}
+
 .contact_img{
     margin-top: 20px;
     margin-bottom: 20px;

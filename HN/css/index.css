@@ -14,19 +14,27 @@ a { cursor: pointer; }
 
 .nav-tabs { border-bottom: none; }
 
+.top_right { float: right; }
+
+@media (max-width: 992px) { .contact_input_box { padding-right: 0; }
+  .contact_body { padding-top: 185px; }
+  .top_right { float: none; } }
+@media (min-width: 992px) and (max-width: 1200px) { .top_right { padding-right: 0; } }
 /*! nav  style*/
-@media screen and (device-width: 768px) { .body_index { padding-top: 180px; }
-  .top_right { position: absolute; top: 15px; right: 0; } }
+@media screen and (device-width: 768px) { .body_index { padding-top: 180px; } }
 @media (max-width: 768px) { .navbar-header { height: 100px; }
   .navbar-fixed-bottom { position: none; }
-  .navbar-fixed { bottom: 0; margin-bottom: 0; border-width: 1px 0 0; position: fixed; right: 0; left: 0; z-index: 1030; } }
+  .navbar-fixed { bottom: 0; margin-bottom: 0; border-width: 1px 0 0; position: fixed; right: 0; left: 0; z-index: 1030; }
+  .nav_sx1, .nav_sx2 { display: none; } }
 .navbar-fixed { bottom: 0; margin-bottom: 0; border-width: 1px 0 0; position: fixed; right: 0; left: 0; z-index: 1030; }
 
 @media (min-width: 992px) { .nav_top { height: 90px; } }
 @media (min-width: 768px) and (max-width: 992px) { .navbar-header { margin-top: 6%; }
   .nav_box .top_right { margin-top: 65px; }
   .nav_li { margin-right: 1px; }
-  .nav_sx1, .nav_sx2 { display: none; } }
+  .nav_sx1, .nav_sx2 { display: none; }
+  .contact_body { padding-top: 220px; }
+  .top_right_p { position: absolute; top: 15px; right: 0; } }
 .navbar { border: 0; }
 
 .collapse .nav li a { height: 90px; line-height: 90px; color: #FFFFFF; }
@@ -208,10 +216,6 @@ a { cursor: pointer; }
   .member_content_box { float: none; margin: 27px auto; } }
 @media (max-width: 320px) { #denglu { display: none; } }
 /*  ------ contact   style   */
-@media (max-width: 992px) { .contact_input_box { padding-right: 0; } }
-@media (min-width: 992px) and (max-width: 1200px) { .top_right { padding-right: 0; } }
-.top_right { float: right; }
-
 .contact_img { margin-top: 20px; margin-bottom: 20px; }
 
 .contact_input_box { padding-left: 0; }

@@ -88,10 +88,7 @@
   	------第一屏   视屏
   	
   	-->
-<!--  	<div id="1" style="height: 752px;width: 100%;background:transparent url('../images/video.png') 50% 50% no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;">
-		<video src="../video/video.mp4" poster="../images/0.png" autobuffer id="video" style="height: 100%;width: 100%;">
-		</video>
-		</div>-->
+
 		<div id="1" style="position: relative;">
 			<img id="fullScreenBtn" src="../images/video.png" style="height: 100%; width: 100%;"></img>
 			<div id="videobox" style="position: absolute;top: 0;z-index: -1;">
@@ -221,6 +218,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/index.js"></script>
     <script src="../js/html5media.min.js"></script><!--解决video兼容-->
@@ -305,33 +303,25 @@
 			
 			document.addEventListener("webkitfullscreenchange",function(e) {
 	        console.log('webkit');
-	      alert(1)
-	        
 	        if (!document.webkitIsFullScreen) { //退出全屏暂停视频
 	            document.getElementById('video').pause();
 	        };
 	    }, false);
 	    document.addEventListener('mozfullscreenchange', function(e){
 	      console.log('moz');
-	      alert(1)
+	      //alert(1)
 	        if (!document.mozFullScreen) { //退出全屏暂停视频
 	            document.getElementById('video').pause();
 	        };
 	    }, false);
+	    
+	    $(document).on($.AMUI.fullscreen.raw.fullscreenchange, function () {
+			    console.log('change');
+			    if (!!window.ActiveXObject || "ActiveXObject" in window) { //退出全屏暂停视频
+	            document.getElementById('video').pause();
+	       };
+			});
 
-			/*if (document.msExitFullscreen) {
-	      alert(4)
-	            document.getElementById('video').pause();
-	      
-			}*/
-			
-/*var fullscreenElement = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement;
-var fullscreenEnabled = document.fullscreenEnabled || document.mozFullScreenEnabled || document.webkitFullscreenEnabled;
-if (fullscreenEnabled) {
-	      alert(4)
-	            document.getElementById('video').pause();
-	      
-			}*/
 		</script>
   </body>
 </html>
